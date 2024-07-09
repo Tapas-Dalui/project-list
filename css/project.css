@@ -11,38 +11,37 @@ body{
 	justify-content: center;
 	align-items: center;
 } */
-.container {
-	width: 50%;
-	height: auto;
-	padding: 35px 10%;
-	border: 1px solid #000000;
-	
+section{
+	z-index: -1;
 }
 
-.container {
+
+.container{
+	width: 50%;
+  height: auto;
+	padding: 35px 10%;
+  border: 1px solid #000000;
+}
+.container{
 	padding-right: calc(10% - 30px);
 }
-
-main.row {
+main.row{
 	/* display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-column-gap: 20px; */
-	display: flex;
-	border: 1px solid #000000;
+  display: flex;
+  border: 1px solid #000000;
 }
-
-.col header.title {
+.col header.title{
 	font-family: helvetica;
 	color: #11a372;
 	padding: 0px 0px 20px 30px;
 }
-
-.col .contents {
+.col .contents{
 	padding: 0px 30px;
 	border-left: 2px solid #bababa;
 }
-
-.col .contents .box {
+.col .contents .box{
 	position: relative;
 	padding: 20px;
 	border: 1px solid #eaeaea;
@@ -51,13 +50,11 @@ main.row {
 	transition: all 0.4s;
 	margin-bottom: 20px;
 }
-
-.col .contents .box:hover {
+.col .contents .box:hover{
 	box-shadow: 0px 3px 12px 0px #ccc;
 	border: 1px solid transparent;
 }
-
-.col .contents .box::before {
+.col .contents .box::before{
 	content: '';
 	position: absolute;
 	width: 16px;
@@ -68,24 +65,29 @@ main.row {
 	background-color: #11a372;
 	border: 2px solid white;
 }
-
-.title{
-	font-size: 45px;
-	text-align: center;
+.box h4{
+	position: relative;
+	color: #11a372;
 }
-.title i {
+.box h3{
+	font-size: 19px;
+	padding: 10px 0px 6px;
+	font-family: helvetica;
+	color: #444;
+}
+.box p{
+	line-height: 1.2;
+	color: #666;
+	font-size: 17px;
+}
+
+.title i{
 	font-size: 40px;
 }
 
-.project-btn{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-}
 
-.project-btn .button {
-	/* display: inline-block; */
+.project-btn .button{
+	display: inline-block;
 	padding: 10px 20px;
 	margin: 5px;
 	background-color: #c8d1d8;
@@ -99,63 +101,48 @@ main.row {
 	border-radius: 5px;
 	outline: none;
 	cursor: pointer;
-}
-
-.project-btn .button.active,
-.project-btn .button:hover {
+  }
+  
+  .project-btn .button.active, 
+  .project-btn .button:hover{
 	background-color: #7644da;
 	color: #f6f6f6;
-}
-
-/* .project-btn .button:hover{
+  }
+  /* .project-btn .button:hover{
 	background-color: var(--primary-clr);
 	color: var(--body-clr);
   } */
-
-.logo1 {
+  
+  .logo1{
 	position: fixed;
 	margin: 30px 25px;
-}
-
-.logo1:hover i {
-
-
+  }
+  
+  .logo1:hover i{
+	
+   
 	transform: translateX(-5px);
-}
-
-.logo1 a, .logo1 i {
+  }
+  .logo1 a, .logo1 i{
 	color: #7644da;
 	text-decoration: none;
 	font-size: 20px;
 	font-weight: bold;
-}
-
-/* .pro.cloud, .pro.php,.pro.react{
+  }
+  /* .pro.cloud, .pro.php,.pro.react{
 	margin-left: 20px;
   } */
-.pro {
+  .pro{
 	margin-left: 20px;
-}
+  }
+  
 
 
-@media(max-width: 320px) {
-	.logo {
-		display: none;
+@media(max-width: 768px){
+	main.row{
+		grid-template-columns: 1fr;
 	}
-	#header{
-		align-items: center;
-		justify-content: center;
-	}
-}
-
-@media(max-width: 570px) {
-	.title i {
-		font-size: 0px;
-	}
-}
-
-@media(max-width: 476px) {
-	#header{
-		padding: 10px 15px;
+	.row .col:nth-child(2){
+		margin-top: 30px;
 	}
 }

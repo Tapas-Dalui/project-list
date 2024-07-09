@@ -54,7 +54,7 @@ $('.project-btn .button').on('click', function(){
 })
 
 
-/*Change Cpoyright Year*/
-const d = new Date();
-let year = d.getFullYear();
-document.getElementById("year").innerHTML = year;
+// /*Change Cpoyright Year*/
+// const d = new Date();
+// // let year = d.getFullYear();
+// document.getElementById("year").innerHTML = d.getFullYear();

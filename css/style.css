@@ -28,23 +28,26 @@ p {
 
 
 /*start of header section*/
-#header{
+#header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px 80px;
   background: #f6f6f6;
-  box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+  box-shadow: 0 9px 15px rgba(0, 0, 0, 0.05);
   z-index: 999;
   position: sticky;
   top: 0;
   left: 0;
-
+  width: 100%;
+  z-index: 100;
 }
+
 #header .logo{
   width: 90px;
   
 }
+
 
 #header .icons div{
   height: 2.5rem;
@@ -67,17 +70,82 @@ p {
 
 
 
-
 section {
-  padding-top: 5vh;
+  padding-top: 14vh;
   height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
-  margin-bottom: 20vh;
 }
 
+.section-container {
+  display: flex;
+  flex-direction: row;
+}
 
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 90vh;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 80px;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+#socials-container a i:hover{
+color: #7644da;
+}
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+i{
+  color: #1a1a1a;
+  font-size: 30px;
+}
 
 /* BUTTONS */
 
@@ -125,6 +193,111 @@ section {
   gap: 1rem;
 }
 
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+  /* margin-top: 100px; */
+}
+
+.about-containers {
+  /* display: flex; */
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: #f6f6f6;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section__pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+.text-container ul{
+  color: #555555;;
+  padding-left: 15px;
+}
+
+/* EXPERIENCE SECTION */
+
+#experience {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+article:hover{
+  color: #7644da;
+}
+
+/* article .icon {
+  cursor: default;
+} */
 
 /* PROJECTS SECTION */
 
@@ -145,7 +318,6 @@ section {
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.04);
   transition: 0.2s ease;
   position: relative;
-
 }
 #projects .pro:hover{
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.08);
@@ -165,14 +337,10 @@ section {
   color: #1a1a1a;
   font-size: 18px;
   margin: 15px 0px;
-  text-align: center;
-  text-transform: capitalize;
 
 }
 .view{
   font-size: 15px;
-  letter-spacing: 2px;
-  font-weight: 700;
 }
 
 .project-btn{
@@ -222,6 +390,49 @@ section {
 }
  
 
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container a {
+  margin: 10px;
+}
+.contact-info-container a i:hover{
+ color: #7644da;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
 /* FOOTER SECTION */
 
 footer {
@@ -236,5 +447,11 @@ footer p {
   color: #151515;
   font-size: 25px;
 }
+
+
+
+
+
+/** extra Page*/
 
 
