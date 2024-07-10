@@ -344,11 +344,23 @@ article:hover{
 }
 
 .project-btn{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 8px;
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem,1fr));
+  gap: 0.5rem;
+  /* margin-top: 8px; */
 }
+
+.project-btn .list {
+  padding: 1rem 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;  /* Center items vertically */
+  justify-content: center;  /* Center items horizontally */
+  box-shadow: var(--box-shadow);
+  flex-wrap: wrap;  /* Ensure items wrap to new line if necessary */
+}
+
 .project-btn a{
   text-decoration: none;
 }
